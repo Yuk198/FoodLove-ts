@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+    <title>Về chúng tôi</title>
+    <!-- BOOTSTRAP -->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+<body>
+
+    <header id="header">
+        <%- include ('../partials/header') %>
+    </header>
+
+    <section class="main">
+        <!--Banner-->
+        <div class="page-banner">
+            <div class="container">
+                <h1>Giới thiệu</h1>
+                <p>Tìm hiểu thêm về nhà hàng của chúng tôi</p>
+            </div>
+        </div>
+        <div id="about-content">
+            <div class="container">
+                <div class="row"> <!--Tạo 1 hàng-->
+                    <div class="col-md-6"> <!--Chia 2 cột-->
+                        <section class="img-1">
+                            <img src="/img/about-bg.png">
+                        </section>
+                    </div>
+                    <div class="col-md-6"> <!--Chia 2 cột-->
+                        <div class="ab-1">
+                            <h1>Câu chuyện của chúng tôi</h1>
+                            <span>Khám phá câu chuyện của chúng tôi</span> 
+                            <p>Tất cả bắt đầu từ năm 2022
+
+                                Chào mừng đến với FoodLove . Cửa hàng được xây dựng trên tình yêu và niềm đam mê ẩm thực của chúng tôi. Chúng tôi tự hào trong việc cung cấp dịch vụ nồng hậu, thân thiện và tạo ra những món ăn ngon miệng cho tất cả mọi người. Chỉ sử dụng những nguyên liệu tươi ngon nhất có nguồn gốc địa phương, chúng tôi sẽ đảm bảo bạn sẽ có trải nghiệm ăn uống đáng nhớ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="header-2">Chúng tôi là ai</h1>
+                <div class="row"> <!--Tạo 1 hàng-->
+                    <div class="col-lg-4 col-md-6"> <!--Chia làm 3 cột, khi thu nhỏ lại thành 1 cột-->
+                        <section class="cheft">
+                            <img src="/img/db1.png"><br>
+                            <h5>Nguyễn Huỳnh Vi Vương</h5>
+                            <p class="about-cheft">Có 18 năm kinh nghiệm từng đạt giải nhất cuộc thi Bếp trẻ năm 2003, giải nhất Ẩm thực miền biển năm 2005, á quân Chiếc thìa vàng năm 2015.</p>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-6"> <!--Chia làm 3 cột, khi thu nhỏ lại thành 1 cột-->
+                        <section class="cheft">
+                            <img src="/img/db2.png""><br>
+                            <h5>Jack Lee</h5>
+                            <p class="about-cheft">Có 20 năm kinh nghiệm từng chế biến các món ăn cho cho sao Hollywood và tham gia nhiều show truyền hình về ẩm thực. </p>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-6"> <!--Chia làm 3 cột, khi thu nhỏ lại thành 1 cột-->
+                        <section class="cheft">
+                            <img src="/img/db3.png"><br>
+                            <h5>Christine Hà</h5>
+                            <p class="about-cheft">Là quán quân vua đầu bếp MasterChef 2012 tại Mỹ, tham gia Vua đầu bếp Việt Nam 2013-2014, và là giám khảo Vua đầu bếp Việt Nam 2015.</p><br>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="header-2">Nhận xét về chúng tôi</h1>
+                <p class="p-2">Họ nói gì về chúng tôi</p>
+                <div class="row"> <!--Tạo 1 hàng-->
+                    <div class="col-lg-4 col-md-6">
+                        <section class="cm">
+                            <div class="cm-img">
+                                <img src="/img/cm.jpg">
+                            </div>
+                            <h5>Lê Thu Trang</h5>
+                            <p class="about-cm">Thực đơn nhà hàng vô cùng phong phú, chất lượng món ăn cực kì tốt, trang trí đơn giản nhưng lại đệp mắt, giá cả hợp lý.
+                                Chất lượng phục vụ tốt, nhân viên ở đây rất niệt tình. Bạn muốn được thưởng thức những món ăn ngon với giá rẻ cũng như phù hợp với giá tiền. Hãy đến với Foodlove</p>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <section class="cm">
+                            <div class="cm-img">
+                                <img src="/img/cm.jpg">
+                            </div>
+                            <h5>Trần Xuân Mai</h5>
+                            <p class="about-cm">Khi nhận đồ ăn, các món ăn vẫn còn rất nóng hổi, rất tươi ngon như là tôi đang thực sự bước chân tới cửa hàng vậy. Nếu bạn mong muốn có 1 bữa ăn ngon miệng. Hãy đến với foodlove. Nơi đáp ứng được nhu cầu ăn uống của bạn</p>
+                        </section>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <section class="cm">
+                            <div class="cm-img">
+                                <img src="/img/cm.jpg">
+                            </div>
+                            <h5>Nguyễn Trung Quyết</h5>
+                            <p class="about-cm">Thức ăn ngon, bày trí đẹp mắt
+                                Nhân viên thân thiện, nhiệt tình, vui vẻ
+                                Chuyên nghiệp,  bày trí khá OK
+                                Cám ơn vì sự chu đáo.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer_section">
+        <%- include ('../partials/footer') %>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>

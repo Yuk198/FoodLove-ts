@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+    <title>FoodLove♥</title>
+    <!-- BOOTSTRAP -->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal_cart.css">
+</head>
+<body>
+
+    <header id="header">
+        <%- include ('../partials/header') %>
+    </header>
+
+    <section class="main">
+
+        <!-- Slide -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/Food-Web-Banner-03.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/hero-bg.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/Slide-3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- order -->
+        <div class="order">
+            <div id="introduction" class="container">
+                <div class="row">
+                    <div id="title-con1">
+                        <h2>Đồ ăn đa dạng phong phú</h2>
+                        <p>Với tiêu chí giúp quý khách thưởng thức trọn vẹn những món ăn ngon những vẫn phù hợp với giá tiền.</p>
+                    </div>
+                    <div class="row top-menu mt-5">
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <img src="/img/img-sp1.jpg" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <img src="/img/img-sp2.jpg" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <img src="/img/img-sp3.jpg" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card">
+                                <img src="/img/img-sp4.jpg" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- sale-off -->
+        <div class="sale-off">
+            <div id="event" class="container">
+                <div id="txt-con2" class="row">
+                    <h2>Chương trình khuyến mãi</h2>
+                </div>
+                <div class="row">
+                    <div id="img-product-con2" class="col-md-4 ">
+                        <div>
+                            <a href=""><img src="/img/img-sale1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div id="img-product-con2" class="col-md-4">
+                        <div>
+                            <a href=""><img src="/img/img-sale2.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div id="img-product-con2" class="col-md-4">
+                        <div>
+                            <a href=""><img src="/img/img-sale3.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Menu -->
+        <section class="food_section layout_padding-bottom">
+            <div id="menu" class="container">
+                <div class="filters-content">
+                    <div class="row">
+                        <div class="heading_container  heading_center">
+                            <h2>Thực đơn nổi bật</h2>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all pizza">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f1.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Pizza Lạp Xưởng
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                49000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button>                                          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all buger">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f2.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Buger Bò Phô Mai
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                39000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all pizza">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f3.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Pizza Rau Củ
+                                        </h5>
+                                        <p>
+                                            Thanh Nhẹ Với Ô Liu Đen Tuyệt Hảo, Cà Chua Bi Tươi Ngon, Nấm, Thơm, Bắp, Hành Tây.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                49000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all pizza">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f4.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Nui Xào
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                29000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all pizza">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f5.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Khoai Tây Chiên
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                49000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all pizza">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f6.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Pizza Cà Chua
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                49000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all buger">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f7.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Buger Gà Cay
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                49000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all buger">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f8.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Buger Đặc Biệt
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                49000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 all pizza">
+                            <div class="box">
+                                <div>
+                                    <div class="img-box">
+                                        <img src="/img/f9.png" alt="">
+                                    </div>
+                                    <div class="detail-box">
+                                        <h5 class="name-product-h5">
+                                            Nui Xào
+                                        </h5>
+                                        <p>
+                                            Sự kết hợp đột phá với Lạp xưởng và phô mai Mozzarella mang lại trải nghiệm mới mẻ và thú vị.
+                                        </p>
+                                        <div class="options">
+                                            <h6 class="price">
+                                                49000
+                                            </h6>
+                                        </div>
+                                        <button type="button" class="btn btn-cart">+</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <a href="./shop">
+                        Xem thêm
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="end-of-body">
+            <div class="end-of-body-text">
+                <h2>
+                    Đăng ký để nhận cập nhật
+                </h2>
+                <br>
+                <br>
+                <h3>
+                    Để lại email để không bỏ lỡ bất kì ưu đãi nào
+                </h3>
+            </div>
+            <form action="">
+                <div class="all-form">
+                    <div class="email">
+                        <input type="text" name="txtEmail" id="txtEmail" placeholder="    Emaill..." required>
+                        <div class="status">
+                            <span id="statusOfEmail"></span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" name="btnRegister" id="btnRegister" value="Đăng ký">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+
+    <footer class="footer_section">
+        <%- include ('../partials/footer') %>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+</body>
+</html>

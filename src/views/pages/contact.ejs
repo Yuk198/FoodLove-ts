@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+    <title>Liên hệ</title>
+    <!-- BOOTSTRAP -->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header id="header">
+        <%- include ('../partials/header') %>
+    </header>
+
+    <!--Banner-->
+    <div class="page-banner">
+        <div class="container">
+            <h1>Liên hệ</h1>
+            <p>Tìm hiểu về nhà hàng của chúng tôi</p>
+        </div>
+    </div>
+
+<!-- Contact -->
+    <div class="content">
+        <div class="container">
+            <div class="content-section"> 
+                <h1 class="section-heading">
+                    LIÊN HỆ VỚI CHÚNG TÔI
+                </h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form_container">
+                            <form action="">
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Họ và tên" />
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Số điện thoại" />
+                                </div>
+                                <div>
+                                    <input type="email" class="form-control" placeholder="Email" />
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Địa chỉ" />
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control message" placeholder="Lời nhắn" />
+                                </div>
+                                <div class="btn_box">
+                                    <button>
+                                        Gửi
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <img src="./img/dhthuyloi.png" class="img-map" >
+                        </div>
+                        <p><i class="fa-solid fa-location-pin"></i> 175 P. Tây Sơn, Trung Liệt, Đống Đa, Hà Nội , Việt Nam</p>
+                        <p><i class="fa-solid fa-envelope"></i> FoodLove@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 0386724473</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+
+    <div class="end-of-body">
+        <div class="end-of-body-text">
+            <h2>
+                Đăng Ký Để Nhận Cập Nhật
+            </h2>
+            <br>
+            <br>
+            <h3>
+                Để lại email để không bỏ lỡ bất kì ưu đãi nào
+            </h3>
+        </div>
+        <form action="">
+            <div class="all-form">
+                <div class="email">
+                    <input type="text" name="txtEmail" id="txtEmail" placeholder="    Emaill..." required>
+                    <div class="status">
+                        <span id="statusOfEmail"></span>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" name="btnRegister" id="btnRegister" value="Đăng ký">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+<!-- Footer -->
+
+<footer class="footer_section">
+    <%- include ('../partials/footer') %>
+</footer>
+
+
+<script src="./script/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
