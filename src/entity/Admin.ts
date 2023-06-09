@@ -1,16 +1,13 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
-@Entity('Menu')
-export class Menu {
+@Entity('Admin')
+export class Admin {
   @PrimaryGeneratedColumn()
-  id!: number
+  id_ad!: number
 
   @Column()
-  name!: string
+  username!: string
 
   @Column()
-  description!: string
-
-  @Column()
-  price!: number
+  password!: string
 }

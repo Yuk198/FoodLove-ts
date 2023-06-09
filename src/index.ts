@@ -57,10 +57,6 @@ const dtb = data.AppDataSource
 dtb
   .initialize()
   .then(async () => {
-    const user1 = new User()
-    user1.username = 'manager1'
-    user1.password = '123456'
-    await dtb.manager.save(user1)
     console.log('Data Source has been initialized!')
   })
   .catch((err) => {
