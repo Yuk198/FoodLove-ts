@@ -18,6 +18,6 @@ export class Items {
   @Column()
   price!: number
 
-  @ManyToOne(() => Bill, (bill) => bill.nameitem)
-  bill!: Bill
+  // @ManyToOne(() => Bill, (bill) => bill.nameitem)
+  // bill!: Bill
 }

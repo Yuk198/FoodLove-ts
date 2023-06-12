@@ -2,409 +2,225 @@
 <html lang="en">
 <head>
     <%- include ('../partials/head') %>
-    <title>Admin FoodLove♥</title> 
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="./css/admin.css">
-    <!----===== Iconscout CSS ===== -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="./css/admin.css">
+
+	<title>FoodLove♥</title>
 </head>
 <body>
-    <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="img/logof.jpg" alt="">
-            </div>
-            </div>
-            <span class="logo_name">FoodLove♥</span>
-        </div>
 
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="#Dashboard">
-                    <i class="uil uil-estate"></i>
-                    <span class="link-name">Dashboard</span>
-                </a></li>
-                <li><a href="#Bill">
-                    <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Bill</span>
-                </a></li>
-                <li><a href="#Analytics" hreflang="">
-                    <i class="uil uil-chart"></i>
-                    <span class="link-name">Analytics</span>
-                </a></li>
-                <li><a href="#Staff">
-                    <i class="uil uil-user"></i>
-                    <span class="link-name">Staff</span>
-                </a></li>
-            </ul>
-            
-            <ul class="logout-mode">
-                <li><a href="#">
-                    <i class="uil uil-signout"></i>
-                    <span class="link-name">Logout</span>
-                </a></li>
 
-                <li class="mode">
-                    <a href="#">
-                        <i class="uil uil-moon"></i>
-                    <span class="link-name">Dark Mode</span>
-                </a>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">FoodLove♥</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="/admin/menu">
+					<i class='bx bxs-food-menu' ></i>
+					<span class="text">Quản lý Thực Đơn</span>
+				</a>
+			</li>
+			<li>
+				<a href="/admin/bill">
+					<i class='bx bxs-notepad' ></i>
+					<span class="text">Quản lý đơn hàng</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Cài đặt</span>
+				</a>
+			</li>
+			<li>
+				<a href="/login" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Đăng xuất</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
 
-                <div class="mode-toggle">
-                  <span class="switch"></span>
-                </div>
-            </li>
-            </ul>
-        </div>
-    </nav>
 
-    <section class="dashboard">
-        <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
 
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here...">
-            </div>
-            
-            <img src="images/profile.jpg" alt="">
-        </div>
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">20</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="./img/cm.jpg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
 
-        <div id="Dashboard">
-            <div class="dash-content">
-                <div class="overview">
-                    <div class="title">
-                        <i class="uil uil-estate"></i>
-                        <span class="text">Dashboard</span>
-                    </div>
-    
-                    <div class="boxes">
-                        <div class="box box1">
-                            <i class="uil uil-files-landscapes"></i>
-                            <span class="text">Bill</span>
-                            <span class="number">5000</span>
-                        </div>
-                        <div class="box box2">
-                            <i class="uil uil-chart"></i>
-                            <span class="text">Analytics</span>
-                            <span class="number">5000</span>
-                        </div>
-                        <div class="box box3">
-                            <i class="uil uil-user"></i>
-                            <span class="text">Staff</span>
-                            <span class="number">20</span>
-                        </div>
-                    </div>
-                </div>
-        </div>
-            
-            <div id="Bill">
-                <div class="dash-content">
-                    <div class="overview">
-                        <div class="title">
-                            <i class="uil uil-files-landscapes"></i>
-                            <span class="text">Bill</span>
-                    </div>  
-    
-                      </style>
-                      </head>
-                      <body>
-            
-                          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-                              integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-                          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-                          <!-- jQuery library -->
-                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-                          <!-- Latest compiled JavaScript -->
-                          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-                          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
-                          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
-                          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
-                          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-                          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-                      </head>
-                      
-                      <body>
-                          <div class="container-fluid">
-                              <div class="row">
-                                  <div class="col-lg-12">
-                                      <table class="table table-bordered" id="myTable">
-                                          <thead>
-                                              <tr class="ex">
-                                                  <th style="background-color: rgb(82, 240, 251); font-style: initial;" font-size: large;>Tên khách hàng</th>
-                                                  <th style="background-color: rgb(82, 240, 251); font-style: initial;" font-size: large;>Địa chỉ</th>
-                                                  <th style="background-color: rgb(82, 240, 251); font-style: initial;" font-size: large;>Email</th>
-                                                  <th style="background-color: rgb(82, 240, 251); font-style: initial;" font-size: large;>Số điện thoại</th>
-                                                  <th width="5px; !important" style="background-color: rgb(82, 240, 251); font-style: initial;" font-size: large;>Tính Năng</th>
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                              <tr>
-                                                  <td>Thanh An</td>
-                                                  <td>175 Tây Sơn</td>
-                                                  <td>Annie@gmail.com</td>
-                                                  <td>0987654321</td>
-                                                  <td>
-                                                      <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                              aria-hidden="true"></i></a>
-                              
-                                                      <a href="" data-toggle="modal" data-target="#modelId">
-                                                          <i class="fa fa-calculator" aria-hidden="true"></i>
-                                                      </a>
-                                                  </td>
-                                              </tr>
-                                              <tr>
-                                                  <td>Huy Bình</td>
-                                                  <td>1 Thanh Xuân</td>
-                                                  <td>Binh12@gmail.com</td>
-                                                  <td>0987654321</td>
-                                                  <td>
-                                                      <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                              aria-hidden="true"></i></a>
-                                                      <a href="" data-toggle="modal" data-target="#modelId">
-                                                          <i class="fa fa-calculator" aria-hidden="true"></i>
-                                                      </a>
-                                                  </td>
-                                              </tr>
-                              
-                                             
-                                              <tr>
-                                                  <td>Văn Đức</td>
-                                                  <td>5 Phùng Khoang</td>
-                                                  <td>DucHP@gmail.com</td>
-                                                  <td>0987654321</td>
-                                                  <td>
-                                                      <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                              aria-hidden="true"></i></a>
-                                                      <a href="" data-toggle="modal" data-target="#modelId">
-                                                          <i class="fa fa-calculator" aria-hidden="true"></i>
-                                                      </a>
-                                                  </td>
-                                              </tr>
-                                              
-                                              <tr>
-                                                  <td>Trung Quyết</td>
-                                                  <td>134 Thái Hà</td>
-                                                  <td>Quyt122@gmail.com</td>
-                                                  <td>0987654321</td>
-                                                  <td>
-                                                      <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                              aria-hidden="true"></i></a>
-                                                      <a href="" data-toggle="modal" data-target="#modelId">
-                                                          <i class="fa fa-calculator" aria-hidden="true"></i>
-                                                      </a>
-                                                  </td>
-                                              </tr>
-                                          </tbody>
-                                      </table>
-                                      <div id="pageNavPosition" class="text-right"></div>
-                                      <script type="text/javascript">
-                                          var pager = new Pager('myTable', 5);
-                                          pager.init();
-                                          pager.showPageNav('pager', 'pageNavPosition');
-                                          pager.showPage(1);
-                                      </script>
-                                  </div>
-                                          </div>
-                                          <div class="col-lg-12">
-                                          
-                                          </div>
-                                      </div>
-                                  </div>
-                              
-                                  <div class="payment-food">
-                                      <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                                          <div class="modal-dialog" role="document">
-                                              <div class="modal-content">
-                                                  <div class="modal-header">
-                                                      <h3 class="modal-title">Thông tin hoá đơn</h3>
-                                                  </div>
-                                                  <div class="modal-body">
-                                                      <div class="container-fluid">
-                                                          <table class="food-table">
-                                                              <tr class="header-table">
-                                                                  <th style="background-color: rgb(114, 236, 241); font-style: initial;" font-size: large;>Tên món ăn</th>
-                                                                  <th style="background-color: rgb(114, 236, 241); font-style: initial;" font-size: large;>Đơn giá</th>
-                                                                  <th style="background-color: rgb(114, 236, 241); font-style: initial;" font-size: large;>Số lượng</th>
-                                                                  <th style="background-color: rgb(114, 236, 241); font-style: initial;" font-size: large;>Thành tiền</th>
-                                                              </tr>
-                                                      
-                                                              <tr>
-                                                                  <th>Tên món 1</th>
-                                                                  <th>Đơn giá 1</th>
-                                                                  <th>1</th>
-                                                                  <th>100.000 đ</th>
-                                                              </tr>
-                                                      
-                                                              <tr>
-                                                                  <th>Tên món 2</th>
-                                                                  <th>Đơn giá 2</th>
-                                                                  <th>2</th>
-                                                                  <th>200.000 đ</th>
-                                                              </tr>
-                                                              <style>
-                                                                  table
-                                                                  {
-                                                                      width: 100%;
-                                                                  }
-                              
-                                                                  th
-                                                                  {
-                                                                      border: 1px solid #000;
-                                                                  }
-                                                              </style>
-                                                  
-                                                          </table>
-                                                      </div>
-                                                  
-                                                      <h3>Tổng: 300.000 đ</h3>
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                      <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  </div>
-                              </div>
-                          </div>
-            </div>
-            
-            <div id="Analytics">
-                <div class="dash-content">
-                    <div class="overview">
-                         <div class="title">
-                            <i class="uil uil-chart"></i>
-                               <span class="text">Analytics</span>
-                  </div>
-                          <body>
-                              <img src="./img/analytics.png" height="250%" width="100%" alt="" />
-                          </body>
-                   </div>
-             
-                       <div id="Staff">
-                        <div class="dash-content">
-                            <div class="overview">
-                                <div class="title">
-                                    <i class="uil uil-user"></i>
-                                    <span class="text">Staff</span>
-                                </div>
-                                <body>
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <table class="table table-bordered" id="myTable">
-                                                    <thead>
-                                                        <tr class="ex">
-                                                            <th style="background-color:  rgb(114, 236, 241); font-style: initial;" font-size: large;>Tên nhân viên</th>
-                                                            <th style="background-color:  rgb(114, 236, 241); font-style: initial;" font-size: large;>Giới tính</th>
-                                                            <th style="background-color:  rgb(114, 236, 241); font-style: initial;" font-size: large;>Email</th>
-                                                            <th style="background-color:  rgb(114, 236, 241); font-style: initial;" font-size: large;>Số điện thoại</th>
-                                                            <th style="background-color:  rgb(114, 236, 241); font-style: initial;" font-size: large;>Chức vụ</th>
-                                                            <th width="5px; !important" style="background-color:  rgb(114, 236, 241); font-style: initial;" font-size: large;>Tính Năng</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Nv1</td>
-                                                            <td>Nam</td>
-                                                            <td>Nv1@gmail.com</td>
-                                                            <td>0987654321</td>
-                                                            <td>Admin</td>
-                                                            <td>
-                                                                <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                                        aria-hidden="true"></i></a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Nv2</td>
-                                                            <td>Nam</td>
-                                                            <td>Nv2@gmail.com</td>
-                                                            <td>0987654321</td>
-                                                            <td>Phục vụ</td>
-                                                            <td>
-                                                                <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                                        aria-hidden="true"></i></a> 
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                        
-                                                       
-                                                        <tr>
-                                                            <td>Nv3</td>
-                                                            <td>Nữ</td>
-                                                            <td>Nv3@gmail.com</td>
-                                                            <td>0987654321</td>
-                                                            <td>Thu ngân</td>
-                                                            <td>
-                                                                <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                                    aria-hidden="true"></i></a>            
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                        
-                                                        <tr>
-                                                            <td>Nv4</td>
-                                                            <td>Nam</td>
-                                                            <td>Nv4@gmail.com</td>
-                                                            <td>0987654321</td>
-                                                            <td>Đầu bếp</td>
-                                                            <td>
-                                                                <a class="delete" title="Xóa" data-toggle="tooltip"><i class="fa fa-trash-o"
-                                                                        aria-hidden="true"></i></a>
-                                                                   
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div id="pageNavPosition" class="text-right"></div>
-                                                <script type="text/javascript">
-                                                    var pager = new Pager('myTable', 6);
-                                                    pager.init();
-                                                    pager.showPageNav('pager', 'pageNavPosition');
-                                                    pager.showPage(1);
-                                                </script>
-                       </div>
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 
-                        <hr class="hr1">
-                        <div class="container-fluid end">
-                            <div class="row text-center">
-                                <div class="col-lg-12 link">
-                                    <i class="fab fa-facebook-f"></i>
-                                    <i class="fab fa-twitter"></i>
-                                    <i class="fab fa-pinterest-p"></i>
-                                    <i class="fab fa-instagram"></i>
-                      <script>
-                          $('#exampleModal').on('show.bs.modal', event => {
-                              var button = $(event.relatedTarget);
-                              var modal = $(this);
-                            
-                          });
-                      </script>
-                  
-                      <script src="jquery.min.js"></script>
-                      <script type="text/javascript">
-                     
-                              // Xóa
-                              $(document).on("click", ".delete", function () {
-                                  $(this).parents("tr").remove();
-                                  swal("Thành Công!", "Bạn Đã Xóa Thành Công", "success");
-                                  $(".add-new").removeAttr("disabled");
-                              });
-                       
-                          //Not use
-                          jQuery(function () {
-                              jQuery(".cog").click(function () {
-                                  swal("Sorry!", "Tính Năng Này Chưa Có", "error");
-                              });
-                          });
-                          //Tool tip
-                          $(document).ready(function () {
-                              $('[data-toggle="tooltip"]').tooltip();
-                          });
-                      </script>
-        <script src="./script/admin.js"></script>           
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-food-menu' ></i>
+					<span class="text">
+						<h3>20</h3>
+						<p>Menu</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-notepad' ></i>
+					<span class="text">
+						<h3>24</h3>
+						<p>Order</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>$2543</h3>
+						<p>Total</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Đơn hàng gần đây</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Đồ ăn</th>
+								<th>Giá</th>
+								<th>Thanh toán</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="./img/f1.png">
+									<p>Pizza</p>
+								</td>
+								<td>10.000đ</td>
+								<td><span class="status completed">Đã thanh toán</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./img/f1.png">
+									<p>Pizza</p>
+								</td>
+								<td>10.000đ</td>
+								<td><span class="status pending">Chưa thanh toán</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./img/f4.png">
+									<p>Pasta</p>
+								</td>
+								<td>20.000đ</td>
+								<td><span class="status process">Đang thanh toán</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./img/f5.png">
+									<p>Khoai tây chiên</p>
+								</td>
+								<td>15.000đ</td>
+								<td><span class="status pending">Chưa thanh toán</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="./img/f2.png">
+									<p>Humbergers</p>
+								</td>
+								<td>30.000đ</td>
+								<td><span class="status completed">Đã thanh toán</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Doanh thu hàng tháng</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>Tuần 1</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Tuần 2</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Tuần 3</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Tuần 4</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="not-completed">
+							<p>Tuần 5</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
 </body>
 </html>

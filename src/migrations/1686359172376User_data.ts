@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner } from 'typeorm'
 
-export class UserData1686325824123 implements MigrationInterface {
+export class UserData1686359172376 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
       `INSERT INTO User (username, password)
@@ -13,10 +13,10 @@ export class UserData1686325824123 implements MigrationInterface {
 
   public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      `DROP FROM User WHERE username = 'customer0';
-      DROP FROM User WHERE username = 'customer1';
-      DROP FROM User WHERE username = 'customer2';
-      DROP FROM User WHERE username = 'customer3';`
+      `DELETE FROM User WHERE username = 'customer0'
+      OR username = 'customer1'
+      OR username = 'customer2'
+      OR username = 'customer3';`
     )
   }
 }

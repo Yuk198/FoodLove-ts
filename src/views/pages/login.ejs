@@ -14,21 +14,22 @@
             <header>Login</header>
         </div>
 
-        <div class="input-field">
-            <input type="text" class="input" placeholder="Username" id="">
-            <i class='bx bx-user' ></i>
-        </div>
-
-        <div class="input-field">
-            <input type="Password" class="input" placeholder="Password" id="">
-            <i class='bx bx-lock-alt'></i>
-        </div>
-
-        <a href="/">
+        <form action ="" method = "post">
             <div class="input-field">
-            <input type="submit" class="submit" value="Login" id="">
+                <input type="text" class="input" name="username" placeholder="Username" id="Username" required>
+                <i class='bx bx-user' ></i>
             </div>
-        </a>
+
+            <div class="input-field">
+                <input type="Password" class="input" name="password" placeholder="Password" id="Password" required>
+                <i class='bx bx-lock-alt'></i>
+            </div>
+
+            <div class="input-field">
+                <input type="submit" class="submit" value="Login" id="">
+            </div>
+            
+        </form>
 
         <div class="top">
             <span>Have an account?</span>
