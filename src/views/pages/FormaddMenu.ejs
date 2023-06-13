@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<!-- My CSS -->
+	<link rel="stylesheet" href="/css/formadd.css">
+
+	<title>FoodLove♥</title>
+</head>
+<body>
+
+
+		<%- include ('../partials/hadmin') %>
+
+        <!--MAIN-->
+                              
+        <main>
+			<div class="table-data">
+				<div class="order">
+					<div>
+						<a class="btn btn-primary" href="/admin/menu" role="button">Quay lại</a>
+					</div>
+					<div class="head">
+						<h3>THÊM MÓN ĂN</h3>
+					</div>
+                                            
+                        <form action ="" method = "post">  
+                            <label for="item_name">Tên món ăn:</label> 
+                            <input type="text" id="item_name" name="item_name" required> 
+                            <label for="item_price">Giá:</label>  
+                            <input type="text" id="item_price" name="item_price" required>
+							<label for="item_image">Ảnh:</label>  
+                            <input type="text" id="item_image" name="item_image">
+							<label for="item_des">Mô tả:</label>  
+                            <input type="text" id="item_des" name="item_des" required>
+                            <div class="row">   
+                             <div class="col-25">    
+                                <label for="country">Trạng thái</label>  
+                                <select id="country" name="country">
+                                <option value="">Còn</option>
+                                <option value="Không còn">Không</option> 
+                                     </select>
+                             </div>    
+                         
+                             <input type="submit" name="submit" value="Xác nhận"></body>
+
+                                   
+                                     </select>
+                                        </div>
+                                      </div>
+                            </form>
+                        </body>
+                        </html>
+					</form>
+				</div>
+				
+		</main>
+       
+    
+</body>
+</html>

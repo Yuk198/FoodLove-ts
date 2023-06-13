@@ -9,7 +9,7 @@ export class Items {
   @Column()
   name!: string
 
-  @Column()
+  @Column({ type: 'longblob' })
   image!: string
 
   @Column()

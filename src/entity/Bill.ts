@@ -7,4 +7,7 @@ export class Bill {
 
   @Column()
   id_user!: number
+
+  @Column()
+  date!: Date
 }
