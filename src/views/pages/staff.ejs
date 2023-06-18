@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
-    <%- include ('../partials/head') %>
+	<%- include ('../partials/head') %>
 
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -12,9 +12,13 @@
 	<title>FoodLove♥</title>
 </head>
 <body>
-        <%- include ('../partials/hadmin') %>
-        <!--MAIN-->
-        <main>
+    <%- include ('../partials/hadmin') %>
+
+	<!-- CONTENT -->
+
+		<!-- MAIN -->
+	
+        <form>
             <div class="records table-responsive">
 
                 <div class="record-header">
@@ -23,40 +27,36 @@
                     </div>
     
                     <div class="browse">
-                        <input type="search" placeholder="Search" class="bx bx-search">
-                         <div>
-                         <a href="#"><i class="bx bx-plus"></i></a> 
-                         </div>
+                        <input type="search" id="myInput" onkeyup="searchTableMenu()" placeholder="Search" class="bx bx-search">
                     </div>
                 </div>
     
                 <div>
-                    <table width="100%">
+                    <table id="menutable" width="105%">
                         <thead>
                             <tr>
-                                <th>Mã đơn</th>
-                                <th><span class="las la-sort"></span> Mã khách hàng</th>
-                                <th><span class="las la-sort"></span> Ngày trả</th>
-                                <th><span class="las la-sort"></span> Trạng thái<i></i></th>
-                                <th><span class="las la-sort"></span> Tổng tiền</th>
-                                <th><span class="las la-sort"></span> Thao tác</th>
+                                <th>Mã nhân viên</th>
+                                <th>Tên nhân viên</th>
+                                <th>Tài khoản</th>
+                                <th>Mật khẩu</th>
+                                <th>Chức vụ</th>
+                                <th>Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <% bills.forEach((bills) => {%>
+                            <% staff.forEach((staff) => {%>
                             <tr>
-                                <td><%= bills.id_bill %></td>
+                                <td> <%= staff.id_ad %> </td>
                                 <td>
-                                    <div class="client" >
-                                        <%= bills.id_user %>
-                                    </div>
+                                    <h4> <%= staff.name %> </h4>
+                                <td>
+                                    <%= staff.username %>
+                                </td>
+                                <td> 
+                                    <%= staff.password %>
                                 </td>
                                 <td>
-                                    <%= bills.date %>
-                                </td>
-                                <td><span class="status completed">Đã thanh toán</span></td>
-                                <td>
-                                    <%= bills.total %>
+                                    <%= staff.rank %>
                                 </td>
                                 <td>
                                     <div class="actions">
@@ -67,16 +67,14 @@
                                 </td>
                             </tr>
                             <% }); %>
-                            
                         </tbody>
                     </table>
                 </div>
     
             </div>
         
-        </div>
-        </main>
-    </section>   
+        </form>
     
+    <script src="/script/table.js"></script>
 </body>
 </html>

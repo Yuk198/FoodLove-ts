@@ -10,4 +10,7 @@ export class Bill {
 
   @Column()
   date!: Date
+
+  @Column()
+  total!: number
 }

@@ -19,13 +19,14 @@
                     <a class="nav-link" href="./contact">Liên hệ</a>
                 </li>
             </ul>
-            <form class="d-flex">
+            <form class="d-flex" method="post">
                 <input class=" px-2 search" type="search" placeholder="Tìm kiếm tại đây..." aria-label="Search">
                 <button class="btn1  px-3" type="submit">Search</button>
                 <!-- The Modal -->
                 <span id="cart">
                 <i class="cart-icon ti-shopping-cart" aria-hidden="true"></i>
                 </span>
+                
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -34,26 +35,34 @@
                         </div>
                         <div class="modal-body">
                             <div class="cart-row">
+                                <span class="cart-id cart-header cart-column">ID</span>
                                 <span class="cart-item cart-header cart-column">Sản phẩm</span>
                                 <span class="cart-price cart-header cart-column">Giá</span>
                                 <span class="cart-quantity cart-header cart-column">Số lượng</span>
                             </div>
-                            <div class="cart-items">
-                            </div>
+                                <div class="cart-items">
+                                    
+                                </div>
+                            
                             <div class="cart-total">
                                 <strong class="cart-total-title">Tổng cộng:</strong>
+                                <input type="hidden" id="carttotalprice" name="carttotalprice" value="0">
                                 <span class="cart-total-price">0VNĐ</span>
                             </div>                                    
                         </div>
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary close-footer">Đóng</button>
-                            <button type="button" class="btn btn-primary order">Thanh toán</button>
+                            <button type="submit" class="btn btn-primary order">Thanh toán</button>
                         </div>
                     </div>
                 </div>
-                
             </form>
+            <div class="signout">
+                <a href="/login" class="profile">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
         
     </div>

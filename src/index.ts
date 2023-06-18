@@ -21,6 +21,7 @@ const PORT: number = parseInt(process.env.PORT as string, 10)
 const app = express()
 let checkLog = false
 let accType = 0
+let uid = 0
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
@@ -50,6 +51,7 @@ dtb
 app.get('/login', async function (req: Request, res: Response) {
   checkLog = false
   accType = 0
+  uid = 0
   res.render('pages/login')
 })
 
@@ -95,6 +97,23 @@ app.get('/shop', async function (req: Request, res: Response) {
   }
 })
 
+app.post('/shop', async function (req: Request, res: Response) {
+  if (checkLog == true && accType == 2) {
+    const items = req.body
+    const items_data: any[] = []
+    Object.keys(items.cartid).forEach((key) => {
+      const data: number = +items.cartid[key]
+      const values = getItems(data).then(function (result) {
+        items_data.push(result)
+      })
+    })
+    const usname = await dtb.getRepository(User).findOneBy({ id_user: uid })
+    res.render('pages/payment', { items: items, usname: usname, items_data: items_data })
+  } else {
+    res.redirect('/login')
+  }
+})
+
 app.get('/contact', (req: Request, res: Response) => {
   if (checkLog == true && accType == 2) {
     res.render('pages/contact')
@@ -103,10 +122,48 @@ app.get('/contact', (req: Request, res: Response) => {
   }
 })
 
+app.get('/payment', (req: Request, res: Response) => {
+  if (checkLog == true && accType == 2) {
+    res.render('pages/payment')
+  } else {
+    res.redirect('/login')
+  }
+})
+
+app.post('/payment', (req: Request, res: Response) => {
+  if (checkLog == true && accType == 2) {
+    const items = req.body
+    const items_date: Date = new Date(req.body.date)
+    const items_id: any[] = []
+    sendBill(items.uid, items_date, items.total)
+    Object.keys(items.id_item).forEach((key) => {
+      const data: number = +items.id_item[key]
+      const values = getItems(data).then(function (result) {
+        items_id.push(result)
+      })
+    })
+    res.redirect('/shop')
+  } else {
+    res.redirect('/login')
+  }
+})
+
 app.get('/admin', async (req: Request, res: Response) => {
   if (checkLog == true && accType == 1) {
     const items = await dtb.getRepository(Items).find()
-    res.render('pages/admin')
+    let sumtotal = 0
+    let menutotal = 0
+    let billtotal = 0
+    await sumTotal().then(function (result) {
+      sumtotal = result.sum
+    })
+    await menuTotal().then(function (result) {
+      menutotal = result
+    })
+    await billTotal().then(function (result) {
+      billtotal = result
+    })
+    res.render('pages/admin', { sumtotal: sumtotal, menutotal: menutotal, billtotal: billtotal })
   } else {
     res.redirect('/login')
   }
@@ -173,6 +230,34 @@ app.post('/admin/menu/edit/:id', async (req: Request, res: Response) => {
   }
 })
 
+app.get('/admin/menu/:id', async (req: Request, res: Response) => {
+  if (checkLog == true && accType == 1) {
+    const editid = Number(req.params.id)
+    deleteItem(editid)
+    res.redirect('/admin/menu')
+  } else {
+    res.redirect('/login')
+  }
+})
+
+app.get('/admin/customer', async (req: Request, res: Response) => {
+  if (checkLog == true && accType == 1) {
+    const customer = await dtb.getRepository(User).find()
+    res.render('pages/customer', { customer: customer })
+  } else {
+    res.redirect('/login')
+  }
+})
+
+app.get('/admin/staff', async (req: Request, res: Response) => {
+  if (checkLog == true && accType == 1) {
+    const staff = await dtb.getRepository(Admin).find()
+    res.render('pages/staff', { staff: staff })
+  } else {
+    res.redirect('/login')
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
@@ -191,8 +276,10 @@ async function checkAcc(username_: string, password_: string) {
     }
   })
   if (dataus) {
+    uid = dataus.id_user
     return 2
   } else if (dataad) {
+    uid = dataad.id_ad
     return 1
   } else {
     return 0
@@ -215,4 +302,49 @@ async function updateItem(id: number, item_name: string, item_price: number, ite
     .set({ name: item_name, price: item_price, image: item_image, description: item_des })
     .where('id_item = :id_item', { id_item: id })
     .execute()
+}
+
+async function deleteItem(id: number) {
+  await dtb.createQueryBuilder().delete().from(Items).where('id_item = :id_item', { id_item: id }).execute()
+}
+
+async function getName(uid: number) {
+  await dtb
+    .createQueryBuilder()
+    .select('username')
+    .from(User, 'user')
+    .where('user.id_user = :uid', { uid: uid })
+    .getOne()
+}
+
+async function getItems(id: number) {
+  return await dtb
+    .getRepository(Items)
+    .createQueryBuilder('item')
+    .where('item.id_item = :id', { id: id })
+    .getOne()
+    .then((data) => {
+      return data
+    })
+}
+
+async function sendBill(uid: number, date: Date, total: number) {
+  await dtb
+    .createQueryBuilder()
+    .insert()
+    .into(Bill)
+    .values([{ id_user: uid, date: date, total: total }])
+    .execute()
+}
+
+async function sumTotal() {
+  return await dtb.getRepository(Bill).createQueryBuilder('bill').select('SUM(bill.total)', 'sum').getRawOne()
+}
+
+async function menuTotal() {
+  return await dtb.getRepository(Items).createQueryBuilder('item').getCount()
+}
+
+async function billTotal() {
+  return await dtb.getRepository(Bill).createQueryBuilder('bill').getCount()
 }

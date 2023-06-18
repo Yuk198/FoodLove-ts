@@ -79,6 +79,18 @@ html {
     color: rgb(12, 209, 5);
 }
 
+.fa-sign-out {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    margin: 5px 0 0 10px;
+    transition: all 0.3s;
+}
+
+.fa-sign-out:hover {
+    color: rgb(12, 209, 5);
+}
+
 .navbar-toggler {
     font-size: 20px;
     color: black;

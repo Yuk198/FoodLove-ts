@@ -9,6 +9,9 @@ export class Items {
   @Column()
   name!: string
 
+  @Column()
+  type!: string
+
   @Column({ type: 'longblob' })
   image!: string
 

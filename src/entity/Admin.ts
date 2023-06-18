@@ -10,4 +10,10 @@ export class Admin {
 
   @Column()
   password!: string
+
+  @Column()
+  name!: string
+
+  @Column()
+  rank!: string
 }

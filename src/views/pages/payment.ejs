@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %>
+    <title>FoodLove♥</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/css/payment.css">
+</head>
+<body class="bg-light">
+    <form action="/payment" method="post">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-10 col-11 mx-auto">
+    <div class="row mt-5 gx-3">
+
+        <!-- left side div -->
+        <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+            <div class="card p-4">
+            <h2 class="py-4 font-weight-bold">Thông tin đơn hàng</h2>
+            <% var i=0; items_data.forEach((items_data) => {%>
+                <div class="row">
+                    <!-- cart images div -->
+                    <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+                        <img src=<%= items_data.image %> class="img-fluid" alt="cart img">
+                    </div>
+                    <!-- cart product details -->
+                    <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                        <div class="row">
+                            <!-- product name  -->
+                            <div class="col-6 card-title">
+                                <input type="hidden" name="id_item" value="<%= items_data.id_item %>" >
+                                <input type="hidden" name="quantity" value="<%= items.cartquantity[i] %>" >
+                                <h1 class="mb-4 product_name"><%= items_data.name %></h1>
+                                <p class="mb-2">Loại: <%= items_data.type %></p>
+                                <p class="mb-2">Số lượng: <%= items.cartquantity[i] %><% i++ %></p>
+                            </div>
+                            
+                        </div>
+                        <!-- //remover move and price -->
+                        <div class="row">
+                            <div class="col-8 d-flex justify-content-between remove_wish">
+                                <p class="mb-3"> Giá</p>
+                            </div>
+                            <div class="col-4 d-flex justify-content-end price_money">
+                                <h3><%= items_data.price %><span id="itemval">đ </span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <% }) %>
+            </div>
+        </div>
+        </form>
+        
+            <!-- right side div -->
+        <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+            <h1 class="product_name mb-5">Thanh toán</h1>
+        <div class="total-amt d-flex justify-content-between font-weight-bold">
+            <p>Tổng số tiền (đã bao gồm VAT)</p>
+            <h3> <%= items.carttotalprice %> <span id="total_cart_amt">đ</span></h3>
+        </div>
+        
+        <div class="container">
+
+            <form>
+        
+                <div class="row">
+        
+                    <div class="col">
+        
+                        <h3 class="title">Thông tin khách hàng</h3>
+                        
+                        <div class="inputBox">
+                            <span>Họ và Tên :</span>
+                            <input type="text" placeholder="" value="<%= usname.name %>">
+                        </div>
+                        <div class="inputBox">
+                            <span>Địa chỉ:</span>
+                            <input type="text" placeholder="" value="<%= usname.address %>">
+                        </div>
+                        <div class="inputBox">
+                            <span>SĐT :</span>
+                            <input type="text" placeholder="" value="<%= usname.name %>">
+                        </div>
+                        <div class="col">
+
+                            <h3 class="title">Thanh Toán</h3>
+                            <div class="col">
+                            <span>Hình thức thanh toán :</span>
+                            </div>
+                                
+                            <div class="radio">
+                                <input id="radio-1" name="radio" type="radio" checked>
+                                <label for="radio-1" class="radio-label">Tiền mặt</label>
+                                <input id="radio-2" name="radio" type="radio">
+                                <label  for="radio-2" class="radio-label">Chuyển khoản</label>
+                            </div>
+                                  
+                        </div>
+                        <div class="inputBox">
+                            <span>Name on card :</span>
+                            <input type="text" placeholder="" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Credit card number:</span>
+                            <input type="number" placeholder="" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>CVC Number:</span>
+                            <input type="number" placeholder="" required>
+                        </div>
+                        
+                
+                    </div>
+            
+                    
+                </div>
+                
+            </form>
+        </div>
+        <input type="hidden" name="uid" value="<%= usname.id_user %>" >
+        <input id="demotime" type="hidden" name="date" value="" >
+        <input type="hidden" name="total" value=<%= items.carttotalprice %>>
+        <input type="submit" name="submit" value="Đặt hàng">
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    </form>
+    <script src="/script/payment.js"></script>
+    
+</body>
+</html>
