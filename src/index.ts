@@ -55,6 +55,20 @@ app.get('/login', async function (req: Request, res: Response) {
   res.render('pages/login')
 })
 
+app.get('/register', async function (req: Request, res: Response) {
+  res.render('pages/register')
+})
+
+app.post('/register', async function (req: Request, res: Response) {
+  const username = req.body.username
+  const password = req.body.password
+  const name = req.body.name
+  const tel = req.body.tel
+  const address = req.body.address
+  await registerAcc(username, password, name, tel, address)
+  res.redirect('/login')
+})
+
 app.post('/login', async function (req: Request, res: Response) {
   const username = req.body.username
   const password = req.body.password
@@ -284,6 +298,15 @@ async function checkAcc(username_: string, password_: string) {
   } else {
     return 0
   }
+}
+
+async function registerAcc(username: string, password: string, name: string, tel: string, address: string) {
+  await dtb
+    .createQueryBuilder()
+    .insert()
+    .into(User)
+    .values([{ username: username, password: password, name: name, tel: tel, address: address }])
+    .execute()
 }
 
 async function sendItem(item_name: string, item_price: number, item_image: string, item_des: string) {
